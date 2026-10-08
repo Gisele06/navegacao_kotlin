@@ -19,12 +19,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 
-@Preview(showBackground = true, showSystemUi = true)
+//@Preview(showBackground = true, showSystemUi = true)
 
 
 @Composable
-fun MenuScreen(modifier: Modifier = Modifier) {
+fun MenuScreen(modifier: Modifier = Modifier, navController: NavController) {
     Box(
         modifier = Modifier.fillMaxSize()
             .background(Color(0xFF3F51B5))
@@ -45,7 +46,7 @@ fun MenuScreen(modifier: Modifier = Modifier) {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Button(
-                onClick =  {/* TODO */},
+                onClick =  {navController.navigate("perfil/Manoel Gomes/32")},
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
 
@@ -56,9 +57,9 @@ fun MenuScreen(modifier: Modifier = Modifier) {
                     color = Color.Blue
                 )
             }
-
+6
             Button(
-                onClick =  {/* TODO */},
+                onClick =  {navController.navigate("pedidos?numeroPedido={666}")},
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
@@ -70,7 +71,7 @@ fun MenuScreen(modifier: Modifier = Modifier) {
             }
 
             Button(
-                onClick =  {/* TODO */},
+                onClick =  {navController.navigate("login")},
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
